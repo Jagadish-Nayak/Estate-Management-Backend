@@ -29,6 +29,7 @@ export const signIn = async (req, res, next) => {
     const option = {
       expires:new Date(Date.now()+2*24*60*60*1000),
       httpOnly:true,
+      sameSite:'strict'
   }
     res
       .cookie('access_token', token, option)

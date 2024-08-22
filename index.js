@@ -26,7 +26,9 @@ app.use(express.json());
 
 app.use(cookieParser());
 app.use(
-  cors()
+  cors(
+    {credentials:true,}
+  )
 );
 app.listen(4000, () => {
   console.log('Server is running on port 4000...');
